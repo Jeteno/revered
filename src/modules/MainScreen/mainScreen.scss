@@ -1,0 +1,176 @@
+.main-screen__page {
+   padding: 12px 0 25px;
+}
+.main-screen__content {
+   @extend %flexColumnCommon;
+   align-items: center;
+   gap: 68px;
+}
+.main-screen__title {
+   text-align: center;
+}
+.main-sreen__title-h {
+   @extend %fontStyleSemiBold;
+   @include adaptiveFont(41, 35);
+   color: #fff;
+}
+.main-screen__cards {
+   @extend %flexSpaceCenter;
+   align-items: flex-start;
+   position: relative;
+   width: 100%;
+   @media screen and (min-width: 1225px) {
+      width: 80.2%;
+   }
+   @media screen and (max-width: 997px) {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+   }
+}
+.main-screen__card {
+   @extend %flexColumnCommon;
+   position: relative;
+   max-width: 334px;
+   min-height: 100%;
+   gap: 25px;
+   border-radius: 11.354px;
+   background: #6A994E;
+   box-shadow: 0px 3.785px 94.621px 0px rgba(0, 0, 0, 0.25);
+   &:nth-child(2) {
+      background: #1D252B;
+      position: relative;
+      z-index: 1;
+      top: -37px;
+      @media screen and (min-width: 998px) {
+         position: absolute;
+         left: 50%;
+         transform: translateX(-50%);
+      }
+      @media screen and (max-width: 997px) {
+         top: 0;
+         order: -1;
+      }
+   }
+   &:nth-child(3) {
+      @media screen and (max-width: 830px) {
+         order: -1;
+      }
+   }
+   @media screen and (max-width: 997px) {
+      min-height: auto;
+      flex: 1 1;
+   }
+   @media screen and (max-width: 600px) {
+      flex: 1 1 auto;
+   }
+}
+.main-screen__card-header {
+   @extend %flexColumnCommon;
+   gap: 15px;
+   padding: 37.848px 60px 25px;
+   border-bottom: solid 1px rgba(255, 255, 255, 0.10);
+}
+.card__header-heading {
+   @extend %flexColumnCommon;
+   gap: 15px;
+   padding-bottom: 15px;
+   border-bottom: solid 1px rgba(255, 255, 255, 0.10);
+}
+.heading__title-h {
+   @extend %fontStyleSemiBold;
+   @include adaptiveFont(16, 12);
+   color: #fff;
+}
+.heading__subtitle {
+   display: flex;
+   align-items: end;
+}
+.heading__term-currency {
+   @extend %fontStyleExtraBold;
+   @include adaptiveFont(11, 10);
+   color: #fff;
+   cursor: pointer;
+}
+.heading__price-h {
+   @extend %fontStyleExtraBold;
+   @include adaptiveFont(37, 30);
+   display: flex;
+   color: #fff;
+}
+.heading__term-link {
+   @extend %fontStyleRegular;
+   @include adaptiveFont(12, 10);
+   margin: 25px 0 0 5px;
+   cursor: pointer;
+}
+.description__paragraph {
+   @extend %fontStyleRegular;
+   @include adaptiveFont(12, 10);
+}
+.main-screen__card-body {
+   @extend %flexColumnCommon;
+   padding: 0 60px;
+   gap: 24px;
+   flex: 1 1 auto;
+}
+.card__body-cap {
+   @extend %flexColumnCommon;
+   gap: 10px;
+}
+.card__body-cap-title-h {
+   @extend %fontStyleSemiBold;
+   @include adaptiveFont(15, 11);
+   color: #fff;
+}
+.card__body-cap-subtitle-p {
+   @extend %fontStyleMedium;
+   @include adaptiveFont(13, 10);
+   color: #fff;
+}
+.card__body-list {
+   @extend %flexColumnCommon;
+   gap: 15px;
+}
+.card__body-paragraph {
+   @extend %fontStyleMedium;
+   @include adaptiveFont(12, 10);
+   background: url('../img/cards/Polygon.svg') no-repeat 0 50%;
+   padding-left: 18px;
+   color: rgba(255, 255, 255, 0.80);
+   &:nth-last-child(-n+3) {
+      color: #fff;
+   }
+}
+.main-screen__card-footer {
+   padding: 0 60px 28px;
+}
+.card-footer__button {
+   @extend %fontStyleMedium;
+   @extend %flexCenter;
+   @include adaptiveFont(12, 10);
+   width: 100%;
+   padding: 12px 22px;
+   border-radius: 7px;
+   border: 0.864px solid #D0D0D0;
+   background: initial;
+   box-shadow: 0px 6px 14px 0px rgba(0, 0, 0, 0.10);
+   &:hover {
+      opacity: 0.5;
+   }
+}
+
+.arrow {
+   background: url('../img/cards/arrow.svg') no-repeat 0 50%;
+   background-position: 75%;
+   background-color: #BC4749;
+   @media screen and (max-width: 980px) {
+      background-position: 80%;
+   }
+   @media screen and (max-width: 270px) {
+      background-position: 90%;
+   }
+   @media screen and (max-width: 240px) {
+      background-position: 95%;
+   }
+}

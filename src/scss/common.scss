@@ -1,0 +1,38 @@
+.wrapper{
+   width: 100%;
+}
+.page {
+   display: flex;
+   justify-content: center;
+}
+.container{
+   width: 92.6%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+.body {
+   display: flex;
+   justify-content: space-between;
+   width: 100%;
+}
+.content {
+   width: 100%;
+}
+.button__red {
+   @extend %flexCenter;
+   padding: 8.636px 13.818px;
+   gap: 9px;
+   width: 100%;
+   border-radius: 7px;
+   border: 0.864px solid #D66567;
+   background-color: #BC4749;
+
+   @extend %fontStyleMedium;
+   @include adaptiveFont(12, 10);
+   color: #FFF;
+   &:hover {
+      @extend %fontStyleSemiBold;
+      background: #bc474991;
+   }
+}

@@ -1,0 +1,65 @@
+$maxWidth: 1306;
+
+@mixin adaptiveFont($pcSize, $mobSize) {
+   $addSize: $pcSize - $mobSize;
+   $addMobSize: $addSize + $addSize * 0.7;
+   @media (max-width: 767px) {
+      font-size: calc(#{$mobSize + px} + #{$addMobSize} * ((100vw - 320px) / #{$maxWidth}));
+   }
+   @media (min-width: 767px) {
+      font-size: calc(#{$mobSize + px} + #{$addSize} * (100vw / #{$maxWidth}));
+   }
+}
+
+$font-family: 'Inter', sans-serif;
+
+%commonFontStyle {
+   font-family: $font-family;  
+   font-style: normal;
+   line-height: 128%;
+   color: rgba(255, 255, 255, 0.80);
+}
+
+%fontStyleRegular {
+   font-weight: 400;
+   @extend %commonFontStyle;
+}
+
+%fontStyleMedium {  
+   font-weight: 500;
+   @extend %commonFontStyle;
+}
+
+%fontStyleSemiBold {  
+   font-weight: 600;
+   @extend %commonFontStyle;
+}
+
+%fontStyleExtraBold {  
+   font-weight: 800;
+   @extend %commonFontStyle;
+}
+
+%flexCenter{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+%flexColumnCommon {
+   display: flex;
+   flex-direction: column;
+}
+%flexColumns{
+   @extend %flexColumnCommon;
+   align-items: flex-start;
+   justify-content: flex-start;
+}
+%flexSpaceCenter {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+%flexColumnCenter {
+   @extend %flexColumnCommon;   
+   align-items: center;
+}
